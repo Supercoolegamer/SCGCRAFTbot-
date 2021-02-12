@@ -3,9 +3,9 @@ const discord = require("discord.js");
 module.exports.run = async (client, message, args) =>{
 
    // !clear aantal
-   if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Je hebt geen toestemming");
+   if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("Je hebt geen toestemming!");
  
-   if (!args[0]) return message.reply("Geef een aantal op dat je weg wilt halen");
+   if (!args[0]) return message.reply("Geef een aantal berichten op dat je wilt verwijderen!");
 
    if (Number.isInteger(parseInt(args[0]))) {
 
@@ -15,22 +15,22 @@ module.exports.run = async (client, message, args) =>{
 
            if (args[0] == 0) {
 
-               message.reply(`Ben je loemp ik kan toch niet 0 berichten verwijderen?`).then(msg => msg.delete({timeout: 3000}));
+               message.reply(`Geef een aantal op groter dan 0`).then(msg => msg.delete({timeout: 3000}));
            
            } else if (args[0] == 1) {
            
-               message.reply(`Ik heb 1 bericht verwijderd.`).then(msg => msg.delete({timeout: 3000}));
+               message.reply(`Ik heb 1 bericht verwijderd!`).then(msg => msg.delete({timeout: 3000}));
            
            } else {
            
-               message.reply(`Ik heb ${args[0]} berichten verwijderd.`).then(msg => msg.delete({timeout: 3000}));
+               message.reply(`Ik heb ${args[0]} berichten verwijderd!`).then(msg => msg.delete({timeout: 3000}));
            
            }
 
        });
 
    } else {
-       return message.reply("Geef een getal op.");
+       return message.reply("Geef een aantal berichten op dat je wilt verwijderen!");
    } 
 
 }
