@@ -93,7 +93,7 @@ client.on("guildMemberRemove", member => {
 client.on("ready", async () => {
  
     console.log(`${client.user.username} is online.`);
-    client.user.setActivity("/help | Officiele SCGCRAFT bot!", { type: "PLAYING" });
+    client.user.setActivity("/help | Officiele SCG NETWORK bot!", { type: "PLAYING" });
  
 });
  
