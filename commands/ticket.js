@@ -52,7 +52,7 @@ module.exports.run = async (client, message, args) => {
 
                     var embedParent = new discord.MessageEmbed()
                         .setTitle(`Hoi ${message.author.username}`)
-                        .setDescription("Waarmee kunnen we je helpen? Typ /close om het ticket te sluiten!");
+                        .setDescription("Waarmee kunnen we je helpen? Als je geen vragen meer hebt, vraag dan aan een stafflid om het ticket te sluiten!");
 
                     settedParent.send(embedParent);
 
